@@ -1,0 +1,3 @@
+/home/aoba/CLionProjects/project4-mylasthw/cmake-build-debug/CMakeFiles/project4_mylasthw.dir
+/home/aoba/CLionProjects/project4-mylasthw/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/aoba/CLionProjects/project4-mylasthw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
