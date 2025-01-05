@@ -205,7 +205,7 @@ int entry_main()
         int decrypted_len = decrypt_string(encrypted, password, &decrypted);
         if (decrypted_len < 0)
         {
-            fprintf(stderr, "无法解密数据库文件\n");
+            fprintf(stderr, "无法解密数据库文件，可能是密码错误。\n");
             free(decrypted);
             fclose(file);
             return 1;
