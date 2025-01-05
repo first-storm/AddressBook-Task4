@@ -1,11 +1,12 @@
 #ifndef CONTACTS_H
 #define CONTACTS_H
 
-#include <stddef.h>  // 要size_t类型(AI教的)
+#include <stddef.h> // 要size_t类型(AI教的)
 #include <jansson.h>
 
 // 联系人结构
-typedef struct {
+typedef struct
+{
     char name[50];       // 姓名
     char gender[10];     // 性别
     char phone[20];      // 联系方式
@@ -13,7 +14,8 @@ typedef struct {
     char address[100];   // 家庭住址
 } Contact;
 
-typedef struct {
+typedef struct
+{
     Contact *contacts; // 动态数组存储联系人
     size_t size;       // 当前联系人数量
     size_t capacity;   // 动态数组容量
