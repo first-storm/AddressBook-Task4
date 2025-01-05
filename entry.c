@@ -267,7 +267,7 @@ void handle_exit_signal(int signal)
 
 int safe_exit()
 {
-    FILE *file = fopen("database.dat", "w");
+    FILE *file = fopen("database.dat", "w+");
     if (!file)
     {
         fprintf(stderr, "无法打开数据库文件\n");
@@ -290,7 +290,8 @@ int safe_exit()
         fclose(file);
         return 1;
     }
-    int encrypted_len = encrypt_string(json_str, password, &encrypted);
+    encrypt_string(json_str, password, &encrypted);
+    int encrypted_len = strlen(encrypted);
     if (encrypted_len < 0)
     {
         fprintf(stderr, "无法加密数据\n");
@@ -299,7 +300,7 @@ int safe_exit()
         return 1;
     }
 
-    size_t bytes_written = fwrite(encrypted, 1, strlen(encrypted), file);
+    size_t bytes_written = fwrite(encrypted, 1, encrypted_len, file);
     if (bytes_written != encrypted_len)
     {
         fprintf(stderr, "无法写入数据库文件\n");
