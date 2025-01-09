@@ -55,18 +55,6 @@ build CMakeFiles/project4_mylasthw.dir/main.c.o: C_COMPILER__project4_mylasthw_u
   OBJECT_DIR = CMakeFiles/project4_mylasthw.dir
   OBJECT_FILE_DIR = CMakeFiles/project4_mylasthw.dir
 
-build CMakeFiles/project4_mylasthw.dir/user_manager.c.o: C_COMPILER__project4_mylasthw_unscanned_Debug /home/aoba/CLionProjects/project4-mylasthw/user_manager.c || cmake_object_order_depends_target_project4_mylasthw
-  DEP_FILE = CMakeFiles/project4_mylasthw.dir/user_manager.c.o.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/project4_mylasthw.dir
-  OBJECT_FILE_DIR = CMakeFiles/project4_mylasthw.dir
-
-build CMakeFiles/project4_mylasthw.dir/database.c.o: C_COMPILER__project4_mylasthw_unscanned_Debug /home/aoba/CLionProjects/project4-mylasthw/database.c || cmake_object_order_depends_target_project4_mylasthw
-  DEP_FILE = CMakeFiles/project4_mylasthw.dir/database.c.o.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/project4_mylasthw.dir
-  OBJECT_FILE_DIR = CMakeFiles/project4_mylasthw.dir
-
 build CMakeFiles/project4_mylasthw.dir/contacts.c.o: C_COMPILER__project4_mylasthw_unscanned_Debug /home/aoba/CLionProjects/project4-mylasthw/contacts.c || cmake_object_order_depends_target_project4_mylasthw
   DEP_FILE = CMakeFiles/project4_mylasthw.dir/contacts.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
@@ -99,7 +87,7 @@ build CMakeFiles/project4_mylasthw.dir/encryption.c.o: C_COMPILER__project4_myla
 #############################################
 # Link the executable project4_mylasthw
 
-build project4_mylasthw: C_EXECUTABLE_LINKER__project4_mylasthw_Debug CMakeFiles/project4_mylasthw.dir/main.c.o CMakeFiles/project4_mylasthw.dir/user_manager.c.o CMakeFiles/project4_mylasthw.dir/database.c.o CMakeFiles/project4_mylasthw.dir/contacts.c.o CMakeFiles/project4_mylasthw.dir/menu.c.o CMakeFiles/project4_mylasthw.dir/entry.c.o CMakeFiles/project4_mylasthw.dir/encryption.c.o | /usr/lib64/libssl.so /usr/lib64/libcrypto.so /usr/lib64/libjansson.so
+build project4_mylasthw: C_EXECUTABLE_LINKER__project4_mylasthw_Debug CMakeFiles/project4_mylasthw.dir/main.c.o CMakeFiles/project4_mylasthw.dir/contacts.c.o CMakeFiles/project4_mylasthw.dir/menu.c.o CMakeFiles/project4_mylasthw.dir/entry.c.o CMakeFiles/project4_mylasthw.dir/encryption.c.o | /usr/lib64/libssl.so /usr/lib64/libcrypto.so /usr/lib64/libjansson.so
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib64/libssl.so  /usr/lib64/libcrypto.so  /usr/lib64/libjansson.so
   OBJECT_DIR = CMakeFiles/project4_mylasthw.dir
