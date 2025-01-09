@@ -1,8 +1,0 @@
-/home/aoba/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/aoba/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/aoba/CLionProjects/project4-mylasthw -B /home/aoba/CLionProjects/project4-mylasthw/cmake-build-debug
--- OpenSSL Include Directory: /usr/include
--- OpenSSL Libraries: /usr/lib64/libssl.so;/usr/lib64/libcrypto.so
--- Jansson Include Directory: /usr/include
--- Jansson Library: /usr/lib64/libjansson.so
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/aoba/CLionProjects/project4-mylasthw/cmake-build-debug
