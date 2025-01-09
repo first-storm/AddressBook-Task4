@@ -15,8 +15,39 @@ void addContactMenu(void)
 
     printf("\n=== 添加联系人 ===\n");
     safeInputString("请输入姓名: ", name, sizeof(name));
+    // 检查姓名是否为2-4个汉字
+    size_t len = strlen(name);
+    if (len < 6 || len > 12 || len % 3 != 0)
+    { // UTF-8编码中，一个汉字占3个字节
+        printf("错误：姓名必须是2-4个汉字！\n");
+        return;
+    }
+    for (size_t i = 0; i < len; i += 3)
+    {
+        if ((unsigned char)name[i] != 0xE4 && (unsigned char)name[i] != 0xE5 &&
+            (unsigned char)name[i] != 0xE6 && (unsigned char)name[i] != 0xE7 &&
+            (unsigned char)name[i] != 0xE8 && (unsigned char)name[i] != 0xE9)
+        {
+            printf("错误：姓名必须是汉字！\n");
+            return;
+        }
+    }
     safeInputString("请输入性别: ", gender, sizeof(gender));
     safeInputString("请输入电话: ", phone, sizeof(phone));
+    // 检查电话号码格式是否正确 (中国大陆手机号为11位数字，以1开头)
+    if (strlen(phone) != 11 || phone[0] != '1')
+    {
+        printf("错误：请输入有效的11位手机号码！\n");
+        return;
+    }
+    for (int i = 0; i < 11; i++)
+    {
+        if (phone[i] < '0' || phone[i] > '9')
+        {
+            printf("错误：电话号码只能包含数字！\n");
+            return;
+        }
+    }
     safeInputString("请输入工作单位: ", workplace, sizeof(workplace));
     safeInputString("请输入家庭住址: ", address, sizeof(address));
 
