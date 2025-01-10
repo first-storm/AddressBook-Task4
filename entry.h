@@ -4,7 +4,7 @@
 #include "menu.h"
 #include <signal.h>
 
-// 程序入口
+// 程序入口（代替main，可读性更好点）
 int entry_main();
 
 // 主菜单
@@ -17,7 +17,6 @@ void modifyContactMenu(void);
 void deleteContactMenu(void);
 void displayAllContactsMenu(void);
 
-// 退出相关函数
 int safe_exit();
 void handle_exit_signal(int signal);
 void handle_exit();

@@ -61,7 +61,8 @@ void destroyMenu(Menu *menu)
 void clearInputBuffer(void)
 {
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
 }
 
 // 安全整数输入
